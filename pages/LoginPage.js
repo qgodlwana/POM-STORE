@@ -11,6 +11,7 @@ class LoginPage {
 
     async gotoLoginPage(){
         await this.page.goto('https://www.demoblaze.com/index.html');
+        await this.page.waitForTimeout(3000);
     }
 
     async login(username, password){
