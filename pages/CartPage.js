@@ -3,7 +3,6 @@ exports.CartPage = class CartPage {
         this.page = page;
         this.noOfProducts = '//tbody[@id="tbodyid"]/tr/td[2]'
     }
-
     async checkProductInCart(productName){
         const productsInCart = await this.page.$$(this.noOfProducts)
         for (const product of productsInCart){

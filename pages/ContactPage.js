@@ -7,7 +7,6 @@ exports.ContactPage = class ContactPage{
         this.contactMessage = '//textarea[@id="message-text"]';
         this.sendMessageBtn='//button[normalize-space()="Send message"]';
     }
-
     async contactUs(emailAddress, fullname, message){
         await this.page.locator(this.contactLink).click();        
         await this.page.on('dialog', async dialog=>{
@@ -20,5 +19,4 @@ exports.ContactPage = class ContactPage{
         await this.page.locator(this.contactMessage).fill(message); 
         await this.page.locator(this.sendMessageBtn).click();       
     }
-
 }

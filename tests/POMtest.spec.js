@@ -28,10 +28,9 @@ test('Page Object Model Testing', async ({ page }) => {
   //Send Message
   const mesage = new ContactPage(page);
   await page.waitForTimeout(4000);
-  await mesage.contactUs('qaqambile@godlwana.test', 'Qaqambile Godlwana', 'This is a test message')  
+  await mesage.contactUs('qaqambile@godlwana.test', 
+    'Qaqambile Godlwana', 'This is a test message') 
 
   //logout
   await login.logout();  
-
 });
-

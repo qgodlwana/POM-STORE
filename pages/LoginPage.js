@@ -8,12 +8,10 @@ class LoginPage {
         this.loginButton = '//button[normalize-space()="Log in"]';
         this.logoutButton = '#logout2'
     }
-
     async gotoLoginPage(){
         await this.page.goto('https://www.demoblaze.com/index.html');
         await this.page.waitForTimeout(3000);
     }
-
     async login(username, password){
         await this.page.locator(this.loginLink).click();
         await this.page.locator(this.usernameInput).fill(username);

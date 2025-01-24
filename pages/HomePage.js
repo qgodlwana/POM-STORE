@@ -5,7 +5,6 @@ exports.HomePage = class HomePage{
         this.addToCartbtn = '//a[normalize-space()="Add to cart"]';
         this.cart='#cartur';
     }
-
     async addProductToCart(productName){
         const productList = await this.page.$$(this.productList);
         for (const product of productList){
